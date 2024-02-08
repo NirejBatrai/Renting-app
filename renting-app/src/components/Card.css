@@ -1,0 +1,47 @@
+.card-holder {
+  margin: 20px;
+  padding: 20px;
+
+  width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.card-holder img {
+  height: 200px;
+
+  margin-bottom: 15px;
+
+  border-radius: 20px;
+
+  background: transparent;
+}
+
+.card-holder h1 {
+  place-self: start;
+}
+
+.card-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.button-style {
+  background-color: #08222e;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
