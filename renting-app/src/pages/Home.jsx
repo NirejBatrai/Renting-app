@@ -166,8 +166,10 @@ export default function Home() {
           </animated.button>
         </div>
       </div>
+
+      {/* Second page */}
       <div className='page2-container'>
-        <section>
+        <section className='one'>
           <div className='dark:bg-gray-200 bg-slate-100 sm:min-h-[600px] sm:grid sm:place-items-center duration-300'>
             <div className='container'>
               <div className='grid grid-cols-1 sm:grid-cols-2 place-items-center'>
@@ -207,6 +209,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Section 2 */}
         <section className='two'>
           <span id='about'></span>
           <div className='dark:text-white py-14 sm:min-h-[600px] sm:grid sm:place-items-center'>
@@ -242,66 +245,69 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className='pb-24'>
-          <div className='container'>
-            <h1
-              data-aos='fade-up'
-              className='text-3xl sm:text-4xl font-semibold font-serif mb-3'
-            >
-              Choose what you Perfer
-            </h1>
-            <p data-aos='fade-up' aos-delay='400' className='text-sm pb-10'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
-              iure nemo ab?
-            </p>
+        {/* Section 3 */}
+        <section className='three'>
+          <div className='pb-24'>
+            <div className='container'>
+              <h1
+                data-aos='fade-up'
+                className='text-3xl sm:text-4xl font-semibold font-serif mb-3'
+              >
+                Choose what you Perfer
+              </h1>
+              <p data-aos='fade-up' aos-delay='400' className='text-sm pb-10'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+                iure nemo ab?
+              </p>
 
-            <div>
-              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16'>
-                {carList.map((data) => (
-                  <div
-                    data-aos='fade-up'
-                    data-aos-delay={data.aosDelay}
-                    className='space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group'
-                  >
-                    <div className='w-full h-[120px]'>
-                      <img
-                        src={data.image}
-                        alt=''
-                        className='w-full h-[120px] object-contain sm:translate-x-8 group-hover:sm:translate-x-16 duration-700'
-                      />
-                    </div>
-                    <div className='space-y-2'>
-                      <h1 className='text-primary font-semibold'>
-                        {data.name}
-                      </h1>
-                      <div className='flex justify-between items-center text-xl font-semibold'>
-                        <p>${data.price}/Day</p>
-                        <a href='#'>Details</a>
+              <div>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16'>
+                  {carList.map((data) => (
+                    <div
+                      data-aos='fade-up'
+                      data-aos-delay={data.aosDelay}
+                      className='space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group'
+                    >
+                      <div className='w-full h-[120px]'>
+                        <img
+                          src={data.image}
+                          alt=''
+                          className='w-full h-[120px] object-contain sm:translate-x-8 group-hover:sm:translate-x-16 duration-700'
+                        />
                       </div>
+                      <div className='space-y-2'>
+                        <h1 className='text-primary font-semibold'>
+                          {data.name}
+                        </h1>
+                        <div className='flex justify-between items-center text-xl font-semibold'>
+                          <p>${data.price}/Day</p>
+                          <a href='#'>Details</a>
+                        </div>
+                      </div>
+                      <p className='text-xl font-semibold absolute top-0 left-3'>
+                        12Km
+                      </p>
                     </div>
-                    <p className='text-xl font-semibold absolute top-0 left-3'>
-                      12Km
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+
+              <div className='grid place-items-center mt-8'>
+                <button
+                  data-aos='fade-up'
+                  className='button-outline bg-black text-white font-bold py-2 px-4 rounded'
+                >
+                  Get Started
+                </button>
               </div>
             </div>
-
-            <div className='grid place-items-center mt-8'>
-              <button
-                data-aos='fade-up'
-                className='button-outline bg-black text-white font-bold py-2 px-4 rounded'
-              >
-                Get Started
-              </button>
-            </div>
           </div>
-        </div>
+        </section>
+        {/* Section 4 */}
         <section className='four'>
           <span id='about'></span>
-          <div className='dark:bg-black dark:text-white py-14 sm:pb-24'>
+          <div className='dark:bg-red dark:text-white py-14 sm:pb-24'>
             <div className='container'>
-              {/* Header */}
               <div className='space-y-4 pb-12'>
                 <p
                   data-aos='fade-up'
@@ -339,7 +345,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        {/* Section 5 */}
+        <section className='five'>
           <div className='container'>
             <div
               className=' text-black py-10 sm:min-h-[400px] sm:grid sm:place-items-center rounded-xl'
@@ -381,7 +388,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        {/* Section 6 */}
+        <section className='six'>
           <span id='contact'></span>
           <div
             data-aos='zoom-in'
@@ -410,10 +418,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        {/* Section 7 */}
+        <section className='seven'>
           <div className='bg-gray-700 dark:text-white mt-14 rounded-t-3xl'>
             <div className=' grid md:grid-cols-3 py-5'>
-              {/* company Details */}
               <div className=' py-8 px-4 '>
                 <h1 className='sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3 font-serif'>
                   Bike Rental
@@ -444,7 +452,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              {/* Links */}
+
               <div className='grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 '>
                 <div className=''>
                   <div className='py-8 px-4 '>
